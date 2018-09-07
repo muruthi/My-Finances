@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_main" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@drawable/ic_autorenew_black_24dp"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/permissionsPrimingView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorPrimaryDark"
+        android:elevation="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/permissionsPrimingTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/string_permission_priming"
+            android:lineSpacingExtra="4dp"
+            android:gravity="center"
+            android:elevation="8dp"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintTop_toTopOf="@id/permissionsPrimingView"
+            app:layout_constraintBottom_toTopOf="@id/permissionsPrimingButton"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="@id/permissionsPrimingView"
+            app:layout_constraintEnd_toEndOf="@id/permissionsPrimingView"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"/>
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/permissionsPrimingButton"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:text="@string/action_permission_priming"
+            android:elevation="8dp"
+            app:layout_constraintTop_toBottomOf="@id/permissionsPrimingTextView"
+            app:layout_constraintStart_toStartOf="@id/permissionsPrimingView"
+            app:layout_constraintEnd_toEndOf="@id/permissionsPrimingView"
+            app:layout_constraintBottom_toBottomOf="@id/permissionsPrimingView"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"/>
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>
