@@ -92,7 +92,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun requestMessagingPermissions() {
-        // Permission is not granted. Pass a request code to view it later onRequestPermissionsRequest
+        // Permission is not granted. Pass a request code to view it later onRequestPermissionsResult
         ActivityCompat.requestPermissions(this,
                 arrayOf(Manifest.permission.READ_SMS),
                 MY_PERMISSIONS_REQUEST_READ_SMS)
